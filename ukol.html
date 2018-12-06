@@ -9,6 +9,7 @@
 <body>
     <br>
     <div class="container">
+
         <div class="row">
             <div class="col-6">
                 <h3>Form:</h3>
@@ -18,27 +19,21 @@
                         <input type="text" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="country">Country</label>
-                        <select class="form-control" id="country">
-                            <option value="cz">Czech Republic</option>
-                            <option value="de">Germany</option>
-                            <option value="uk">United Kingdom</option>
-                        </select>
+                        <label for="name">Surname</label>
+                        <input type="text" class="form-control" id="surname">
                     </div>
                     <div class="form-group">
-                        <label for="note">Note</label>
-                        <textarea class="form-control" id="note" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button id="btnSubmit" class="btn btn-success">Submit</button>
-                        <button id="btnClear" class="btn btn-danger">Clear form</button>
-                        <button id="btnValidateName" class="btn">Validate name</button>
+                        <button id="btn-submit" class="btn btn-success">Submit</button>
+                        <button id="btn-clear" class="btn btn-danger">Clear form</button>
+                        <button id="btn-validate-name" class="btn">Validate name</button>
                     </div>
                 </form>
             </div>
             <div class="col-6">
-                <h3>Result:</h3>
-                <div id="result" style="border: 1px solid gray; min-height: 200px"></div>
+                <h3>Name and Surname:</h3>
+                <div class="card" style="min-height: 200px">
+                    <div id="result" class="card-body">Luděk Veselý</div>
+                </div>
             </div>
         </div>
 
