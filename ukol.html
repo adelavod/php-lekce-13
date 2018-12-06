@@ -41,7 +41,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 
-        // Sem zapište JavaScript
+        // 1. Clear form
+        $('#btn-clear').on('click', function(e) {
+            e.preventDefault();
+            $('#name').val('').removeClass('is-invalid is-valid');
+            $('#surname').val('');
+        });
+
+        // 2. Submit
+        $('#btn-submit').on('click', function(e) {
+            e.preventDefault();
+            let name = $('#name').val();
+            let surname = $('#surname').val();
+            let nameAndSurname = name + ' ' + surname;
+            $('#result').text(nameAndSurname);
+        });
+
+        // 3. Validate
+        $('#btn-validate-name').on('click', function(e) {
+            e.preventDefault();
+            let nameInput = $('#name');
+            if (nameInput.val() === '') {
+                nameInput.removeClass('is-valid');
+                nameInput.addClass('is-invalid');
+            } else {
+                nameInput.removeClass('is-invalid');
+                nameInput.addClass('is-valid');
+            }
+        });
 
     </script>
 </body>
