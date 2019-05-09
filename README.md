@@ -1,3 +1,3 @@
-# Kurz PHP - lekce 12
+# Kurz PHP - lekce 13
 
 * JavaScript
