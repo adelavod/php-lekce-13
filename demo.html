@@ -59,6 +59,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 
+        $('#button-1').on('click', function(e) {
+            e.preventDefault(); // toto zabrání odeslání formuláře
+
+            //1. načtení hodnoty z formuláře
+            let text = $('#name').val();
+
+            console.log(text);
+
+            //zapíše do divu
+            $('#card-3').text(text);
+        })
         // JavaScript...
 
     </script>

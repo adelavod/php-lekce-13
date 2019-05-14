@@ -41,7 +41,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 
-        // Sem zapište JavaScript
+        $('#btn-clear').on('click', function(e) {
+            e.preventDefault(); // toto zabrání odeslání formuláře
+
+            $('#name').val('');
+            $('#surname').val('');
+
+        });
+
+        $('#btn-submit').on('click', function(e) {
+            e.preventDefault(); // toto zabrání odeslání formuláře
+
+            let name = $('#name').val();
+            let surname = $('#surname').val();
+            let both = name + ' ' + surname;
+
+            $('#result').text(both);
+
+
+        });
+
+        //3. validate
+        $('#btn-validate-name').on('click', function (e) {
+            e.preventDefault(); // toto zabrání odeslání formuláře
+            let nameInput = $('#name');
+            if (nameInput.val() === '') {
+                nameInput.removeClass('is-valid');
+                nameInput.addClass('is-invalid');
+            } else {
+                nameInput.removeClass('is-invalid');
+                nameInput.addClass('is-valid');
+            }
+        })
 
     </script>
 </body>
